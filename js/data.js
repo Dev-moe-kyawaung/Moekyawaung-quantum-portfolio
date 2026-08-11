@@ -1,4 +1,3 @@
-```javascript
 
 // ============================================
 // QUANTUM PORTFOLIO - DATA FILE
@@ -493,4 +492,4 @@ const emailCollection = [
     "moekyawaung@socialogist.com",
     "moekyawaung@publicist.com"
 ];
-```
+
