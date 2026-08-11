@@ -1,0 +1,30 @@
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build files
+dist/
+build/
+*.min.js
+
+# Environment variables
+.env
+.env.local
+
+# IDE settings
+.vscode/
+.idea/
+*.swp
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Cache
+.cache/
+*.cache
