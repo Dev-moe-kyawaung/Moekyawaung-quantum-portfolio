@@ -1,0 +1,994 @@
+/* ============================================
+   QUANTUM PORTFOLIO - CUSTOM ANIMATIONS
+   ============================================ */
+
+/* ===== Title Entrance Animations ===== */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ===== Text Effects ===== */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.shimmer-text {
+    background: linear-gradient(90deg, var(--accent-cyan) 0%, var(--accent-purple) 50%, var(--accent-cyan) 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s linear infinite;
+}
+
+/* ===== Particle Effects ===== */
+.particle {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+    animation: float-particle 15s infinite linear;
+}
+
+@keyframes float-particle {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.5;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ===== Dynamic Background ===== */
+@keyframes gradient-move {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.dynamic-bg {
+    background: linear-gradient(-45deg, #0a0e17, #151d33, #1a1140, #0f1524);
+    background-size: 400% 400%;
+    animation: gradient-move 15s ease infinite;
+}
+
+/* ===== Card Hover Effects ===== */
+@keyframes card-lift {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+.card-hover {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Rotating Element ===== */
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes spin-slow-reverse {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+}
+
+.spin-slow {
+    animation: spin-slow 10s linear infinite;
+}
+
+.spin-slower {
+    animation: spin-slow 15s linear infinite;
+}
+
+.spin-reverse {
+    animation: spin-slow-reverse 8s linear infinite;
+}
+
+/* ===== Effects on Scroll (Reveal) ===== */
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-up {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-down {
+    opacity: 0;
+    transform: translateY(-60px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-left.visible,
+.reveal-right.visible,
+.reveal-up.visible,
+.reveal-down.visible,
+.reveal-scale.visible {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+/* ===== Staggered Animation Delays ===== */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
+.delay-7 { transition-delay: 0.7s; }
+.delay-8 { transition-delay: 0.8s; }
+
+/* ===== Pulse Effects ===== */
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 5px var(--accent-cyan);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--accent-cyan), 0 0 40px var(--accent-purple);
+    }
+}
+
+.pulse-glow {
+    animation: pulse-glow 2s infinite;
+}
+
+/* ===== Floating Chat Bot ===== */
+.chatbot-orb {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 56px;
+    height: 56px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-primary);
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.chatbot-orb:hover {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 6px 20px var(--glow-cyan);
+}
+
+.chatbot-orb i {
+    font-size: 1.5rem;
+}
+
+/* Chatbot popup */
+.chatbot-popup {
+    position: fixed;
+    bottom: 5rem;
+    right: 2rem;
+    width: 350px;
+    max-height: 500px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    z-index: 99;
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.chatbot-popup.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.chatbot-header {
+    background: var(--gradient-primary);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--bg-primary);
+}
+
+.chatbot-header span {
+    font-weight: 600;
+}
+
+.chatbot-header button {
+    background: none;
+    border: none;
+    color: var(--bg-primary);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.chatbot-messages {
+    padding: 1rem;
+    height: 350px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 0.75rem;
+    padding: 0.75rem;
+    border-radius: var(--radius-md);
+    max-width: 80%;
+    animation: message-in 0.3s ease;
+}
+
+@keyframes message-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message.bot-message {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    border-bottom-left-radius: 0;
+}
+
+.message.user-message {
+    background: var(--gradient-primary);
+    color: var(--bg-primary);
+    margin-left: auto;
+    border-bottom-right-radius: 0;
+}
+
+.chatbot-input {
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.chatbot-input input {
+    flex: 1;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+}
+
+.chatbot-input button {
+    width: 44px;
+    height: 44px;
+    background: var(--gradient-primary);
+    border: none;
+    border-radius: var(--radius-md);
+    color: var(--bg-primary);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.chatbot-input button:hover {
+    background: var(--accent-green);
+}
+
+/* ===== Particle burst for Orb ===== */
+.particle-burst {
+    position: absolute;
+    pointer-events: none;
+    width: 4px;
+    height: 4px;
+    background: var(--accent-cyan);
+    border-radius: 50%;
+    animation: burst 0.8s forwards;
+}
+
+@keyframes burst {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--dx), var(--dy)) scale(0);
+        opacity: 0;
+    }
+}
+
+/* ============================================
+   SPECIFIC QUANTUM THEME EFFECTS
+   ============================================ */
+
+/* Quantum Tunnel Effect */
+.quantum-tunnel {
+    position: relative;
+    overflow: hidden;
+}
+
+.quantum-tunnel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: conic-gradient(
+        from 0deg,
+        transparent 0%,
+        var(--accent-cyan) 10%,
+        transparent 20%,
+        transparent 30%,
+        var(--accent-purple) 40%,
+        transparent 50%
+    );
+    opacity: 0.1;
+    animation: spin-slow 20s linear infinite;
+}
+
+/* Holographic Effect */
+.holographic {
+    position: relative;
+    backface-visibility: hidden;
+}
+
+.holographic::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        transparent 30%,
+        rgba(0, 240, 255, 0.2) 50%,
+        transparent 70%
+    );
+    opacity: 0;
+    animation: holographic-sweep 3s infinite;
+}
+
+@keyframes holographic-sweep {
+    0%, 100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(100%);
+        opacity: 0.5;
+    }
+}
+
+/* Particle Logo Wrapper */
+.logo-particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.logo-particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-cyan);
+    box-shadow: 0 0 10px var(--accent-cyan);
+    opacity: 0.6;
+}
+
+/* Grid Pattern */
+.quantum-grid {
+    background-image: 
+        linear-gradient(var(--border-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: grid-move 8s linear infinite;
+}
+
+@keyframes grid-move {
+    0% { background-position: 0 0; }
+    100% { background-position: 40px 40px; }
+}
+
+/* Digital Rain Scanline */
+.scanline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: rgba(0, 240, 255, 0.02);
+    z-index: 0;
+    pointer-events: none;
+    animation: scan 8s linear infinite;
+}
+
+@keyframes scan {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+}
+
+
+## **4. js/data.js**
+
+```javascript
+// ============================================
+// QUANTUM PORTFOLIO - DATA FILE
+// ============================================
+
+// Projects Data
+const projectsData = [
+    {
+        id: 1,
+        title: "📱 Social Dashboard",
+        description: "Comprehensive social media management dashboard with real-time analytics and AI-powered insights.",
+        image: "https://res.cloudinary.com/dye5qpwii/image/upload/v1778747384/image-1_f6zlmk.jpg",
+        tech: ["Kotlin", "Compose", "Firebase"],
+        github: "https://github.com/moekyawaung-tech/social-dashboard",
+        demo: "#",
+        category: "android"
+    },
+    {
+        id: 2,
+        title: "💼 POS Ultimate Pro Max",
+        description: "Complete point of sale system with inventory, billing, reports, multi-user support and advanced analytics.",
+        image: "https://res.cloudinary.com/dye5qpwii/image/upload/v1778747384/image_1_buwgls.png",
+        tech: ["Kotlin", "Firestore", "MVVM"],
+        github: "https://github.com/moekyawaung-tech/POS-Ultimate-Pro-Max",
+        demo: "#",
+        category: "android"
+    },
+    {
+        id: 3,
+        title: "🌤️ Weather App",
+        description: "Real-time weather tracking with OpenWeather API, location services, and beautiful animations.",
+        image: "https://res.cloudinary.com/dye5qpwii/image/upload/v1778795825/cloud-icon-poster-1_2_opl7sy.png",
+        tech: ["Kotlin", "Retrofit", "Room"],
+        github: "https://github.com/moekyawaung-tech/Weather-app",
+        demo: "#",
+        category: "android"
+    },
+    {
+        id: 4,
+        title: "🎮 Game Collection",
+        description: "Classic games collection including Snake, Tetris, 2048 with touch controls and scoring system.",
+        image: "https://res.cloudinary.com/dye5qpwii/image/upload/v1778795847/copilot_image_1778795115579_acfm5j.png",
+        tech: ["Kotlin", "Canvas", "Physics"],
+        github: "https://github.com/moekyawaung-tech/game-collection",
+        demo: "#",
+        category: "game"
+    },
+    {
+        id: 5,
+        title: "🎯 Video Player",
+        description: "Feature-rich video player with gesture controls, subtitles, playlists and casting capabilities.",
+        image: "https://res.cloudinary.com/dye5qpwii/image/upload/v1778795853/copilot_image_1778794781671_kytvkc.png",
+        tech: ["Kotlin", "ExoPlayer", "HLS"],
+        github: "https://github.com/moekyawaung-tech/video-player",
+        demo: "#",
+        category: "android"
+    },
+    {
+        id: 6,
+        title: "💼 Job Portal App",
+        description: "Job searching platform with resume builder, AI job matching, and interview prep tools.",
+        image: "https://res.cloudinary.com/dye5qpwii/image/upload/v1778795859/copilot_image_1778794430377_n7xlmz.png",
+        tech: ["Kotlin", "Firestore", "ML Kit"],
+        github: "https://github.com/moekyawaung-tech/Job-Portal-App",
+        demo: "#",
+        category: "android"
+    },
+    {
+        id: 7,
+        title: "✈️ Thailand Travel",
+        description: "Travel companion with local guides, interactive maps, and trip planning features.",
+        image: "https://res.cloudinary.com/dye5qpwii/image/upload/v1778795856/copilot_image_1778795675037_heh9xk.png",
+        tech: ["Kotlin", "Maps", "Compose"],
+        github: "https://github.com/moekyawaung-tech/thailand-travel",
+        demo: "#",
+        category: "android"
+    },
+    {
+        id: 8,
+        title: "📱 PWA App",
+        description: "Progressive Web App with offline-first architecture and cross-platform capabilities.",
+        image: "https://res.cloudinary.com/dye5qpwii/image/upload/v1778747386/image-1_1_khsx9s.png",
+        tech: ["Kotlin", "Compose", "PWA"],
+        github: "https://github.com/moekyawaung-tech/pwa-app",
+        demo: "#",
+        category: "android"
+    },
+    {
+        id: 9,
+        title: "🎵 Music Player",
+        description: "Music player app with equalizer, playlists, sleep timer, and lyrics display.",
+        image: "https://res.cloudinary.com/dye5qpwii/image/upload/v1778763531/MKA_12_iv8kpm.webp",
+        tech: ["Kotlin", "MediaPlayer", "Compose"],
+        github: "https://github.com/moekyawaung-tech",
+        demo: "#",
+        category: "android"
+    },
+    {
+        id: 10,
+        title: "💬 Chat App",
+        description: "Real-time chat application with encryption, group chats, and media sharing.",
+        image: "https://res.cloudinary.com/dye5qpwii/image/upload/v1778763535/MKA_25_lbx6fb.webp",
+        tech: ["Kotlin", "Firestore", "WebSocket"],
+        github: "https://github.com/moekyawaung-tech",
+        demo: "#",
+        category: "android"
+    },
+    {
+        id: 11,
+        title: "💰 Money Tracker",
+        description: "Personal finance tracker with budget planning, expense categories, and analytics.",
+        image: "https://res.cloudinary.com/dye5qpwii/image/upload/v1778763532/MKA_11_jbijtv.webp",
+        tech: ["Kotlin", "Room", "Charts"],
+        github: "https://github.com/moekyawaung-tech/Daily-planner-app",
+        demo: "#",
+        category: "android"
+    },
+    {
+        id: 12,
+        title: "💸 Crypto App",
+        description: "Cryptocurrency tracker with live prices, portfolio management, and news.",
+        image: "https://res.cloudinary.com/dye5qpwii/image/upload/v1778773531/MKA_22_felevo.webp",
+        tech: ["Kotlin", "WebSocket", "MVVM"],
+        github: "https://github.com/moekyawaung-tech",
+        demo: "#",
+        category: "android"
+    },
+    {
+        id: 13,
+        title: "📊 Admin Dashboard",
+        description: "Powerful admin panel with data visualization, user management, and role-based access.",
+        image: "https://res.cloudinary.com/dye5qpwii/image/upload/v1778747388/image-1_1_khsx9s.png",
+        tech: ["Kotlin", "Compose", "MPAndroidChart"],
+        github: "https://github.com/moekyawaung-tech",
+        demo: "#",
+        category: "android"
+    },
+    {
+        id: 14,
+        title: "⚽ World Cup App",
+        description: "World Cup tracker with live scores, fixtures, standings, and notifications.",
+        image: "https://res.cloudinary.com/dye5qpwii/image/upload/v1778747391/image_mplr5r.png",
+        tech: ["Kotlin", "REST API", "Coroutines"],
+        github: "https://github.com/moekyawaung-tech",
+        demo: "#",
+        category: "android"
+    },
+    {
+        id: 15,
+        title: "🛒 E-commerce App",
+        description: "Complete shopping app with cart, payments, order tracking, and wishlist features.",
+        image: "https://res.cloudinary.com/dye5qpwii/image/upload/v1778763531/MKA_3_zqrhhr.webp",
+        tech: ["Kotlin", "Firebase", "Payments"],
+        github: "https://github.com/moekyawaung-tech",
+        demo: "#",
+        category: "android"
+    },
+    {
+        id: 16,
+        title: "📝 Todo App",
+        description: "Productivity app with tasks, reminders, categories, and priority levels.",
+        image: "https://res.cloudinary.com/dye5qpwii/image/upload/v1778763536/preview_ls5ptn.webp",
+        tech: ["Kotlin", "Room", "Notifications"],
+        github: "https://github.com/moekyawaung-tech/javascript-todo",
+        demo: "#",
+        category: "android"
+    }
+];
+
+// Certificates Data
+const certificatesData = [
+    { 
+        name: "Kotlin for Android Development", 
+        category: "Programming Languages", 
+        date: "2024-03-15", 
+        id: "cert_kotlin_001",
+        icon: "🅺"
+    },
+    { 
+        name: "Java Programming Fundamentals", 
+        category: "Programming Languages", 
+        date: "2024-02-20", 
+        id: "cert_java_002",
+        icon: "☕" 
+    },
+    { 
+        name: "Jetpack Compose Mastery", 
+        category: "Mobile & App Dev", 
+        date: "2024-04-10", 
+        id: "cert_compose_003",
+        icon: "🎨" 
+    },
+    { 
+        name: "Clean Architecture in Android", 
+        category: "Software Engineering", 
+        date: "2024-05-05", 
+        id: "cert_arch_004",
+        icon: "🏗️" 
+    },
+    { 
+        name: "Firebase for Mobile Apps", 
+        category: "Mobile & App Dev", 
+        date: "2024-03-30", 
+        id: "cert_firebase_005",
+        icon: "🔥" 
+    },
+    { 
+        name: "Python Programming", 
+        category: "Programming Languages", 
+        date: "2023-11-12", 
+        id: "cert_python_006",
+        icon: "🐍" 
+    },
+    { 
+        name: "REST API Design & Development", 
+        category: "Web Development", 
+        date: "2024-01-25", 
+        id: "cert_rest_007",
+        icon: "🔗" 
+    },
+    { 
+        name: "SQL & Database Management", 
+        category: "Databases", 
+        date: "2023-12-01", 
+        id: "cert_sql_008",
+        icon: "🗄️" 
+    },
+    { 
+        name: "Machine Learning Basics", 
+        category: "AI & Data Science", 
+        date: "2024-06-10", 
+        id: "cert_ml_009",
+        icon: "🤖" 
+    },
+    { 
+        name: "Cybersecurity Essentials", 
+        category: "Security & DevOps", 
+        date: "2024-07-01", 
+        id: "cert_sec_010",
+        icon: "🔐" 
+    },
+    { 
+        name: "Blockchain Technology", 
+        category: "Blockchain", 
+        date: "2024-02-15", 
+        id: "cert_block_011",
+        icon: "⛓️" 
+    },
+    { 
+        name: "Git & Version Control", 
+        category: "Software Engineering", 
+        date: "2023-10-20", 
+        id: "cert_git_012",
+        icon: "🐙" 
+    },
+    { 
+        name: "Docker & Containerization", 
+        category: "Security & DevOps", 
+        date: "2024-05-20", 
+        id: "cert_docker_013",
+        icon: "🐳" 
+    },
+    { 
+        name: "JavaScript Essentials", 
+        category: "Programming Languages", 
+        date: "2023-09-15", 
+        id: "cert_js_014",
+        icon: "🟨" 
+    },
+    { 
+        name: "TypeScript Advanced", 
+        category: "Programming Languages", 
+        date: "2023-11-01", 
+        id: "cert_ts_015",
+        icon: "🔷" 
+    },
+    { 
+        name: "React Native Fundamentals", 
+        category: "Mobile & App Dev", 
+        date: "2024-03-01", 
+        id: "cert_rn_016",
+        icon: "⚛️" 
+    },
+    { 
+        name: "Data Structures & Algorithms", 
+        category: "Programming Languages", 
+        date: "2023-12-15", 
+        id: "cert_dsa_017",
+        icon: "📊" 
+    },
+    { 
+        name: "Cloud Computing (AWS)", 
+        category: "Security & DevOps", 
+        date: "2024-06-25", 
+        id: "cert_aws_018",
+        icon: "☁️" 
+    },
+    { 
+        name: "React.js Development", 
+        category: "Web Development", 
+        date: "2024-01-10", 
+        id: "cert_react_019",
+        icon: "⚛️" 
+    },
+    { 
+        name: "HTML5 & CSS3 Mastery", 
+        category: "Web Development", 
+        date: "2023-08-15", 
+        id: "cert_html_020",
+        icon: "🌐" 
+    },
+    { 
+        name: "Android Testing & CI/CD", 
+        category: "Software Engineering", 
+        date: "2024-07-15", 
+        id: "cert_testing_021",
+        icon: "✅" 
+    },
+    { 
+        name: "GraphQL Fundamentals", 
+        category: "Web Development", 
+        date: "2024-02-01", 
+        id: "cert_graphql_022",
+        icon: "📡" 
+    },
+    { 
+        name: "Flutter Basics", 
+        category: "Mobile & App Dev", 
+        date: "2024-04-01", 
+        id: "cert_flutter_023",
+        icon: "🦋" 
+    },
+    { 
+        name: "Agile & Scrum Methodology", 
+        category: "Software Engineering", 
+        date: "2023-11-20", 
+        id: "cert_agile_024",
+        icon: "🔄" 
+    }
+    // Add more certificates...
+];
+
+// GitHub Accounts
+const githubAccounts = [
+    "https://moekyawaung.github.io/",
+    "https://moekyawaung-tech.github.io/",
+    "https://Dev-moe-kyawaung.github.io/",
+    "https://moekyawaung-cyber.github.io/",
+    "https://moekyawaung-dev.github.io/",
+    "https://moekyawaung-designer.github.io/",
+    "https://moekyawaung-web.github.io/",
+    "https://moekyawaung-creator.github.io/",
+    "https://Moe-KyawAung.github.io/",
+    "https://moekyawaung-senior.github.io/",
+    "https://moekyawaung-developer.github.io/",
+    "https://moekyawaung-graduate.github.io/",
+    "https://moekyawaung-edu.github.io/",
+    "https://moekyawaung-linux.github.io/",
+    "https://moekyawaung-coder.github.io/",
+    "https://moekyawaung-bangkok.github.io/",
+    "https://moekyawaung-china.github.io/",
+    "https://moekyawaung-hack.github.io/",
+    "https://moekyawaung-google.github.io/",
+    "https://moekyawaung-microsoft.github.io/",
+    "https://moekyawaung.co.github.io/",
+    "https://moekyawaung-google.github.io/",
+    "https://moekyawaung2026.github.io/",
+    "https://MoeKyawAung-code.github.io/",
+    "https://moekyawaung-webdeveloper.github.io/",
+    "https://moekyawaung-mk.github.io/",
+    "https://Moekyawaung-Development.github.io/",
+    "https://moekyawaung-myanmar.github.io/"
+];
+
+// Lovable Apps
+const lovableApps = [
+    {
+        title: "Portfolio Builder",
+        description: "Create stunning CVs in minutes",
+        url: "https://happy-cv-creator.lovable.app",
+        icon: "📄"
+    },
+    {
+        title: "Personal Bio",
+        description: "My personal bio page template",
+        url: "https://moekyawaungmybio.lovable.app/",
+        icon: "👤"
+    },
+    {
+        title: "URL Shortener",
+        description: "Clean URL management tool",
+        url: "https://moekyaw-url.lovable.app",
+        icon: "🔗"
+    },
+    {
+        title: "Developer Portfolio",
+        description: "Developer showcase template",
+        url: "https://moekyawaung-dev.lovable.app",
+        icon: "💻"
+    },
+    {
+        title: "CV Palette",
+        description: "CV design system with colors",
+        url: "https://the-cv-palette.lovable.app",
+        icon: "🎨"
+    },
+    {
+        title: "Profile Hub",
+        description: "Professional profile aggregator",
+        url: "https://moe-kyaw-aung.lovable.app",
+        icon: "🌟"
+    },
+    {
+        title: "Code Gallery",
+        description: "Showcase your coding projects",
+        url: "https://joy-codify-life.lovable.app/",
+        icon: "💡"
+    },
+    {
+        title: "GitHub Portfolio",
+        description: "GitHub-integrated portfolio",
+        url: "https://moekyawaung-github.lovable.app",
+        icon: "🐙"
+    },
+    {
+        title: "App Skills",
+        description: "Display your app skills visually",
+        url: "https://app-skill-gallery.lovable.app",
+        icon: "📊"
+    },
+    {
+        title: "Myanmar CV",
+        description: "Localized CV template",
+        url: "https://moekyawaung-myanmar.lovable.app",
+        icon: "🇲🇲"
+    }
+];
+
+// Blog Posts
+const blogPosts = [
+    {
+        title: "Getting Started with Jetpack Compose",
+        excerpt: "Learn the fundamentals of Jetpack Compose and modern Android UI development.",
+        image: "https://res.cloudinary.com/dye5qpwii/image/upload/v1778747384/image-1_f6zlmk.jpg",
+        date: "2024-12-15",
+        category: "Android",
+        readTime: "5 min"
+    },
+    {
+        title: "Clean Architecture in Android Projects",
+        excerpt: "Mastering the art of scalable and maintainable Android app architecture.",
+        image: "https://res.cloudinary.com/dye5qpwii/image/upload/v1778795829/copilot_image_1778795000722_okryxj.png",
+        date: "2024-12-10",
+        category: "Architecture",
+        readTime: "8 min"
+    },
+    {
+        title: "Implementing Firebase Authentication",
+        excerpt: "Step-by-step guide to implementing secure authentication with Firebase Auth.",
+        image: "https://res.cloudinary.com/dye5qpwii/image/upload/v1778795825/cloud-icon-poster-1_2_opl7sy.png",
+        date: "2024-12-05",
+        category: "Firebase",
+        readTime: "6 min"
+    }
+];
+
+// Social Links
+const socialLinks = {
+    github: "https://github.com/Dev-moe-kyawaung",
+    linkedin: "https://www.linkedin.com/in/moe-kyaw-aung-2653093a1",
+    youtube: "https://www.youtube.com/channel/UCuTXUguZb4xjeL2nX8WJG",
+    gravatar: "https://gravatar.com/moekyawaung13721",
+    flickr: "https://www.flickr.com/people/204037451@N06",
+    bluesky: "https://bsky.app/profile/moekyawaung96.bsky.social",
+    tumblr: "https://www.tumblr.com/moekyawaung",
+    vimeo: "https://vimeo.com/user252414232",
+    slack: "https://moekyawaung.slack.com/",
+    paypal: "https://www.paypal.com/paypalme/my/profile",
+    website: "http://moekyawaung2026.strikingly.com"
+};
+
+// Email Collection
+const emailCollection = [
+    "moekyawaung@programmer.net",
+    "moekyawaung@technologist.com",
+    "moekyawaung@engineer.com",
+    "moekyawaung@mail.com",
+    "moekyawaung@linuxmail.org",
+    "moekyawaung@hackermail.com",
+    "moekyawaung@graduate.org",
+    "moekyawaung@techie.com",
+    "moekyawaung@socialogist.com",
+    "moekyawaung@publicist.com"
+];
