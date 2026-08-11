@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moe Kyaw Aung | Senior Android Developer</title>
+    <meta name="description" content="Quantum Matrix Portfolio - Senior Android Developer">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body id="body">
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="quantum-loader"></div>
+    </div>
+
+    <!-- Matrix Rain Canvas -->
+    <canvas id="matrixRain"></canvas>
+    <div class="overlay"></div>
+
+    <!-- Floating Quantum Orb -->
+    <div class="quantum-orb" id="quantumOrb">
+        <div class="orb-core"></div>
+        <div class="orb-ring ring-1"></div>
+        <div class="orb-ring ring-2"></div>
+        <div class="orb-ring ring-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-brand">
+            <span class="nav-logo">◈</span>
+            <span class="nav-name">MKA</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#certificates">Certs</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-controls">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- HOME SECTION -->
+    <!-- ============================================ -->
+    <section id="home" class="section home-section">
+        <div class="home-container">
+            <div class="home-content">
+                <div class="home-badge" data-animation="fade-down">◎ Available for opportunities</div>
+                <h1 class="home-title" data-animation="fade-up">
+                    <span class="title-line">Moe Kyaw Aung</span>
+                    <span class="title-subtitle mono-text">[Senior Android Developer]</span>
+                </h1>
+                <p class="home-location mono-text" data-animation="fade-up">
+                    Tachileik, Myanmar 🇲🇲 ↔ Bangkok, Thailand 🇹🇭
+                </p>
+                <p class="home-desc" data-animation="fade-up">
+                    Crafting quantum-quality mobile experiences with Kotlin, Compose, 
+                    and clean architecture. 82+ certifications in 9 tech domains.
+                </p>
+                <div class="home-actions" data-animation="fade-up">
+                    <button class="btn-primary" id="viewProjects">
+                        <i class="fas fa-rocket"></i> View Projects
+                    </button>
+                    <button class="btn-secondary" id="downloadResume">
+                        <i class="fas fa-download"></i> Download Resume
+                    </button>
+                </div>
+                <div class="home-stats" data-animation="fade-up">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="82">0</span>
+                        <span class="stat-label">Certificates</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="40">0</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="9">0</span>
+                        <span class="stat-label">Tech Domains</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="3">0</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- ABOUT SECTION -->
+    <!-- ============================================ -->
+    <section id="about" class="section about-section">
+        <div class="section-header">
+            <span class="section-tag">// Who I Am</span>
+            <h2 class="section-title">Developer by passion,<br>learner by nature.</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="about-grid">
+            <div class="about-image" data-animation="fade-right">
+                <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778763535/MKA_25_lbx6fb.webp" 
+                     alt="Moe Kyaw Aung" class="profile-img">
+                <div class="image-border"></div>
+            </div>
+            <div class="about-content" data-animation="fade-left">
+                <p>I am a passionate Android developer from Myanmar, currently expanding my horizons in Bangkok, Thailand. With a strong foundation in Kotlin and modern Android development, I build applications that are not just functional, but delightful to use.</p>
+                
+                <div class="about-info">
+                    <div class="info-item">
+                        <span class="info-label">✦ Full Name</span>
+                        <span class="info-value">Moe Kyaw Aung</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">✦ GitHub</span>
+                        <span class="info-value">Dev-moe-kyawaung</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">✦ Focus</span>
+                        <span class="info-value">Mobile · Backend · Security · AI</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">✦ Currently Building</span>
+                        <span class="info-value">MoekyawTranslator — AI App</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">✦ Philosophy</span>
+                        <span class="info-value">"Code with culture. Build with purpose."</span>
+                    </div>
+                </div>
+                
+                <div class="about-cta">
+                    <button class="btn-primary" onclick="downloadResume()">
+                        <i class="fas fa-file-pdf"></i> Download Resume
+                    </button>
+                    <button class="btn-secondary" onclick="smoothScroll('#contact')">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SKILLS SECTION -->
+    <!-- ============================================ -->
+    <section id="skills" class="section skills-section">
+        <div class="section-header">
+            <span class="section-tag">// What I Use</span>
+            <h2 class="section-title">Tech Stack</h2>
+            <div class="section-line"></div>
+        </div>
+        
+        <div class="skills-wrapper">
+            <div class="skill-category" data-animation="fade-up">
+                <h3>📱 Android / Mobile</h3>
+                <div class="skill-chips">
+                    <span class="chip">Kotlin</span>
+                    <span class="chip">Jetpack Compose</span>
+                    <span class="chip">Android Studio</span>
+                    <span class="chip">Coroutines</span>
+                    <span class="chip">Flow</span>
+                    <span class="chip">Material Design</span>
+                    <span class="chip">MVVM</span>
+                    <span class="chip">Clean Architecture</span>
+                    <span class="chip">Room Database</span>
+                    <span class="chip">Navigation</span>
+                    <span class="chip">Paging</span>
+                    <span class="chip">Dagger Hilt</span>
+                </div>
+            </div>
+            
+            <div class="skill-category" data-animation="fade-up">
+                <h3>☁️ Backend & Cloud</h3>
+                <div class="skill-chips">
+                    <span class="chip">Firebase</span>
+                    <span class="chip">REST APIs</span>
+                    <span class="chip">Retrofit</span>
+                    <span class="chip">OkHttp</span>
+                    <span class="chip">JSON</span>
+                    <span class="chip">PostgreSQL</span>
+                    <span class="chip">MongoDB</span>
+                    <span class="chip">Redis</span>
+                    <span class="chip">Docker</span>
+                    <span class="chip">AWS</span>
+                    <span class="chip">Azure</span>
+                    <span class="chip">GCP</span>
+                </div>
+            </div>
+            
+            <div class="skill-category" data-animation="fade-up">
+                <h3>🤖 AI / ML & Security</h3>
+                <div class="skill-chips">
+                    <span class="chip">TensorFlow</span>
+                    <span class="chip">TFLite</span>
+                    <span class="chip">Python</span>
+                    <span class="chip">Claude API</span>
+                    <span class="chip">On-Device ML</span>
+                    <span class="chip">Quality</span>
+                    <span class="chip">Ethical Hacking</span>
+                    <span class="chip">Cybersecurity</span>
+                    <span class="chip">Linux</span>
+                    <span class="chip">Kali Linux</span>
+                </div>
+            </div>
+            
+            <div class="skill-category" data-animation="fade-up">
+                <h3>🛠️ Dev Tools</h3>
+                <div class="skill-chips">
+                    <span class="chip">Git</span>
+                    <span class="chip">GitHub Actions</span>
+                    <span class="chip">Jenkins</span>
+                    <span class="chip">Fastlane</span>
+                    <span class="chip">JUnit</span>
+                    <span class="chip">Espresso</span>
+                    <span class="chip">MockK</span>
+                    <span class="chip">VS Code</span>
+                    <span class="chip">Figma</span>
+                    <span class="chip">Jira</span>
+                    <span class="chip">Agile</span>
+                    <span class="chip">Scrum</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PROJECTS SECTION (Quantum Nodes) -->
+    <!-- ============================================ -->
+    <section id="projects" class="section projects-section">
+        <div class="section-header">
+            <span class="section-tag">// My Work</span>
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-line"></div>
+        </div>
+        
+        <canvas id="projectNetwork"></canvas>
+        
+        <div class="projects-grid" id="projectsGrid">
+            <!-- Project 1 -->
+            <div class="project-card" data-category="android">
+                <div class="card-glow"></div>
+                <div class="card-image">
+                    <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778747384/image-1_f6zlmk.jpg" alt="Social Dashboard">
+                    <div class="card-overlay">
+                        <span class="card-tech">Kotlin · Compose · Firebase</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>📱 Social Dashboard</h3>
+                    <p>Comprehensive social media management dashboard with real-time analytics and AI-powered insights.</p>
+                    <div class="card-links">
+                        <a href="https://github.com/moekyawaung-tech/social-dashboard" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="preview-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card" data-category="android">
+                <div class="card-glow"></div>
+                <div class="card-image">
+                    <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778747384/image_1_buwgls.png" alt="PWA App">
+                    <div class="card-overlay">
+                        <span class="card-tech">Kotlin · Compose · PWA</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>📱 PWA App</h3>
+                    <p>Progressive Web App with offline-first architecture and cross-platform capabilities.</p>
+                    <div class="card-links">
+                        <a href="https://github.com/moekyawaung-tech/pwa-app" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="preview-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-card" data-category="android">
+                <div class="card-glow"></div>
+                <div class="card-image">
+                    <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778795829/copilot_image_1778795000722_okryxj.png" alt="POS System">
+                    <div class="card-overlay">
+                        <span class="card-tech">Kotlin · Firestore · MVVM</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>💼 POS Full Version</h3>
+                    <p>Complete point of sale system with inventory, billing, reports, and multi-user support.</p>
+                    <div class="card-links">
+                        <a href="https://github.com/moekyawaung-tech/POS-Full-Version" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="preview-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 4 -->
+            <div class="project-card" data-category="android">
+                <div class="card-glow"></div>
+                <div class="card-image">
+                    <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778795825/cloud-icon-poster-1_2_opl7sy.png" alt="Weather App">
+                    <div class="card-overlay">
+                        <span class="card-tech">Kotlin · Retrofit · Room</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>🌤️ Weather App</h3>
+                    <p>Real-time weather tracking with OpenWeather API, location services, and animations.</p>
+                    <div class="card-links">
+                        <a href="https://github.com/moekyawaung-tech/Weather-app" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="preview-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 5 -->
+            <div class="project-card" data-category="game">
+                <div class="card-glow"></div>
+                <div class="card-image">
+                    <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778795847/copilot_image_1778795115579_acfm5j.png" alt="Game Collection">
+                    <div class="card-overlay">
+                        <span class="card-tech">Kotlin · Canvas · Physics</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>🎮 Game Collection</h3>
+                    <p>Classic games collection including Snake, Tetris, 2048 with touch controls and scoring.</p>
+                    <div class="card-links">
+                        <a href="https://github.com/moekyawaung-tech/game-collection" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="preview-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 6 -->
+            <div class="project-card" data-category="android">
+                <div class="card-glow"></div>
+                <div class="card-image">
+                    <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778795853/copilot_image_1778794781671_kytvkc.png" alt="Video Player">
+                    <div class="card-overlay">
+                        <span class="card-tech">Kotlin · ExoPlayer · HLS</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>🎯 Video Player</h3>
+                    <p>Feature-rich video player with gesture controls, subtitles, playlists and casting.</p>
+                    <div class="card-links">
+                        <a href="https://github.com/moekyawaung-tech/video-player" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="preview-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 7 -->
+            <div class="project-card" data-category="android">
+                <div class="card-glow"></div>
+                <div class="card-image">
+                    <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778795859/copilot_image_1778794430377_n7xlmz.png" alt="Job Portal">
+                    <div class="card-overlay">
+                        <span class="card-tech">Kotlin · Firestore · ML Kit</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>💼 Job Portal App</h3>
+                    <p>Job searching platform with resume builder, AI job matching, and interview prep tools.</p>
+                    <div class="card-links">
+                        <a href="https://github.com/moekyawaung-tech/Job-Portal-App" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="preview-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 8 -->
+            <div class="project-card" data-category="android">
+                <div class="card-glow"></div>
+                <div class="card-image">
+                    <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778795856/copilot_image_1778795675037_heh9xk.png" alt="Travel App">
+                    <div class="card-overlay">
+                        <span class="card-tech">Kotlin · Maps · Compose</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>✈️ Thailand Travel</h3>
+                    <p>Travel companion with local guides, interactive maps, and trip planning features.</p>
+                    <div class="card-links">
+                        <a href="https://github.com/moekyawaung-tech/thailand-travel" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="preview-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="view-all-projects">
+            <a href="https://github.com/Dev-moe-kyawaung" target="_blank" class="btn-outline">
+                <i class="fab fa-github"></i> View All Projects
+            </a>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- EXPERIENCE SECTION -->
+    <!-- ============================================ -->
+    <section id="experience" class="section experience-section">
+        <div class="section-header">
+            <span class="section-tag">// My Journey</span>
+            <h2 class="section-title">Career Path</h2>
+            <div class="section-line"></div>
+        </div>
+        
+        <div class="timeline">
+            <div class="timeline-item" data-animation="fade-left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2024 - Present</div>
+                <div class="timeline-content">
+                    <h3>Senior Android Developer</h3>
+                    <p>Freelance & Personal Projects</p>
+                    <ul>
+                        <li>Built 40+ production-quality applications</li>
+                        <li>Implemented Clean Architecture & MVVM patterns</li>
+                        <li>Integrated Firebase, REST APIs, and ML features</li>
+                        <li>Established CI/CD pipelines with GitHub Actions</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item" data-animation="fade-left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2023 - 2024</div>
+                <div class="timeline-content">
+                    <h3>Android Developer</h3>
+                    <p>Various Projects & Learning Phase</p>
+                    <ul>
+                        <li>Mastered Kotlin, Jetpack Compose, and Coroutines</li>
+                        <li>Earned 82+ certifications in 9 technical domains</li>
+                        <li>Developed full-featured POS systems</li>
+                        <li>Built game collections with custom physics</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item" data-animation="fade-left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2022 - 2023</div>
+                <div class="timeline-content">
+                    <h3>Web & Mobile Developer</h3>
+                    <p>Foundation and Early Projects</p>
+                    <ul>
+                        <li>Learned core programming languages</li>
+                        <li>Built responsive websites and web apps</li>
+                        <li>Explored backend technologies</li>
+                        <li>Started mobile development journey</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CERTIFICATES SECTION -->
+    <!-- ============================================ -->
+    <section id="certificates" class="section certificates-section">
+        <div class="section-header">
+            <span class="section-tag">// Verified Skills</span>
+            <h2 class="section-title">Certifications</h2>
+            <div class="section-line"></div>
+        </div>
+        
+        <div class="cert-container">
+            <div class="cert-search">
+                <input type="text" id="certSearch" placeholder="Search certificates..." oninput="filterCerts()">
+                <i class="fas fa-search"></i>
+            </div>
+            
+            <div class="cert-filters">
+                <button class="filter-btn active" onclick="filterByCategory(this, 'all')">All (82)</button>
+                <button class="filter-btn" onclick="filterByCategory(this, 'Programming Languages')">⌨️ Programming</button>
+                <button class="filter-btn" onclick="filterByCategory(this, 'Web Development')">🌐 Web Dev</button>
+                <button class="filter-btn" onclick="filterByCategory(this, 'Mobile & App Dev')">📱 Mobile</button>
+                <button class="filter-btn" onclick="filterByCategory(this, 'AI & Data Science')">🤖 AI/ML</button>
+                <button class="filter-btn" onclick="filterByCategory(this, 'Security & DevOps')">🔐 Security</button>
+            </div>
+            
+            <div id="certGrid" class="cert-grid">
+                <!-- Cert cards will be injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- GITHUB COLLECTIONS SECTION -->
+    <!-- ============================================ -->
+    <section id="github" class="section github-section">
+        <div class="section-header">
+            <span class="section-tag">// Open Source</span>
+            <h2 class="section-title">GitHub Collections</h2>
+            <div class="section-line"></div>
+        </div>
+        
+        <div class="github-stats">
+            <div class="stat-card" data-animation="scale-up">
+                <i class="fab fa-github"></i>
+                <span class="stat-number" data-target="43">0</span>
+                <span class="stat-label">Repositories</span>
+            </div>
+            <div class="stat-card" data-animation="scale-up">
+                <i class="fas fa-code-branch"></i>
+                <span class="stat-number" data-target="156">0</span>
+                <span class="stat-label">Commits</span>
+            </div>
+            <div class="stat-card" data-animation="scale-up">
+                <i class="fas fa-users"></i>
+                <span class="stat-number" data-target="7">0</span>
+                <span class="stat-label">Followers</span>
+            </div>
+        </div>
+        
+        <div class="github-accounts">
+            <h3>My GitHub Accounts</h3>
+            <div class="accounts-grid" id="accountsGrid">
+                <!-- Accounts will be injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CONTACT SECTION -->
+    <!-- ============================================ -->
+    <section id="contact" class="section contact-section">
+        <div class="section-header">
+            <span class="section-tag">// Let's Connect</span>
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="section-line"></div>
+        </div>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Let's build something amazing together!</h3>
+                <p>I'm always open to discussing new projects, opportunities, or collaborations.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <span>Phone</span>
+                            <a href="tel:+959889000889">+95 9 889 000 889</a>
+                            <a href="tel:+959666000050">+95 9 666 000 050</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <span>Email</span>
+                            <a href="mailto:moekyawaung@technologist.com">moekyawaung@technologist.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <span>Location</span>
+                            <span>Tachileik, Myanmar ↔ Bangkok, Thailand</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://github.com/Dev-moe-kyawaung" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/moe-kyaw-aung-2653093a1" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/channel/UCuTXUguZb4xjeL2nX8WJG" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://gravatar.com/moekyawaung13721" target="_blank"><i class="fas fa-user-circle"></i></a>
+                    <a href="https://www.flickr.com/people/204037451@N06" target="_blank"><i class="fab fa-flickr"></i></a>
+                    <a href="https://bsky.app/profile/moekyawaung96.bsky.social" target="_blank"><i class="fab fa-bluesky"></i></a>
+                </div>
+            </div>
+            
+            <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- LOVABLE APPS SECTION -->
+    <!-- ============================================ -->
+    <section id="lovable" class="section lovable-section">
+        <div class="section-header">
+            <span class="section-tag">// Quick App Collection</span>
+            <h2 class="section-title">Lovable Apps</h2>
+            <div class="section-line"></div>
+        </div>
+        
+        <div class="lovable-grid" id="lovableGrid">
+            <!-- Lovable apps will be injected by JS -->
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FAQ SECTION -->
+    <!-- ============================================ -->
+    <section id="faq" class="section faq-section">
+        <div class="section-header">
+            <span class="section-tag">// Need Help?</span>
+            <h2 class="section-title">FAQ</h2>
+            <div class="section-line"></div>
+        </div>
+        
+        <div class="faq-container">
+            <div class="faq-item" data-animation="fade-up">
+                <button class="faq-question">
+                    <span>What services do you offer?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>I offer full-stack mobile app development, Android consultancy, backend integration, and technical mentoring. My focus is on modern, scalable, and maintainable solutions.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item" data-animation="fade-up">
+                <button class="faq-question">
+                    <span>What is your experience with Android development?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>I have 3+ years of hands-on experience building Android applications using Kotlin, Jetpack Compose, and modern architectures. I've delivered 40+ projects including POS systems, social media apps, and AI-powered tools.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item" data-animation="fade-up">
+                <button class="faq-question">
+                    <span>How can I download your resume?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Click the "Download Resume" button in the Home or About section, or use the contact form to request a copy directly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- TESTIMONIALS SECTION -->
+    <!-- ============================================ -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="section-header">
+            <span class="section-tag">// Client Feedback</span>
+            <h2 class="section-title">Testimonials</h2>
+            <div class="section-line"></div>
+        </div>
+        
+        <div class="testimonials-slider">
+            <div class="testimonial active">
+                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-text">"Moe Kyaw Aung is an exceptional developer. He delivered our POS system with outstanding quality, exactly on time. His communication and technical skills are top-notch!"</p>
+                <div class="testimonial-author">
+                    <span class="author-name">Client from Singapore</span>
+                    <span class="author-role">Retail Business Owner</span>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-text">"Working with Moe was a great experience. His knowledge of Android architecture and modern practices helped us build a scalable and maintainable app."</p>
+                <div class="testimonial-author">
+                    <span class="author-name">Tech Lead</span>
+                    <span class="author-role">From Bangkok Startup</span>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-text">"Moe's dedication to learning and implementing best practices is inspiring. He brought valuable insights to our project and exceeded our expectations."</p>
+                <div class="testimonial-author">
+                    <span class="author-name">Product Manager</span>
+                    <span class="author-role">Fintech Company</span>
+                </div>
+            </div>
+            
+            <div class="slider-controls">
+                <button class="prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots"></div>
+                <button class="next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- BLOG SECTION -->
+    <!-- ============================================ -->
+    <section id="blog" class="section blog-section">
+        <div class="section-header">
+            <span class="section-tag">// My Notes</span>
+            <h2 class="section-title">Blog & Insights</h2>
+            <div class="section-line"></div>
+        </div>
+        
+        <div class="blog-grid" id="blogGrid">
+            <!-- Blog posts will be injected by JS -->
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- STATS SECTION -->
+    <!-- ============================================ -->
+    <section id="stats" class="section stats-section">
+        <div class="stats-container">
+            <div class="stat-large" data-animation="count-up" data-target="40">0</div>
+            <div class="stat-label-large">Projects Built</div>
+            <div class="stat-large" data-animation="count-up" data-target="82">0</div>
+            <div class="stat-label-large">Certifications</div>
+            <div class="stat-large" data-animation="count-up" data-target="43">0</div>
+            <div class="stat-label-large">Repositories</div>
+            <div class="stat-large" data-animation="count-up" data-target="7">0</div>
+            <div class="stat-label-large">GitHub Accounts</div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================ -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">◈ MKA</span>
+                <p>© 2026 Moe Kyaw Aung. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/Dev-moe-kyawaung" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/moe-kyaw-aung-2653093a1" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://gravatar.com/moekyawaung13721" target="_blank"><i class="fas fa-user-circle"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>Made with ❤️ and quantum particles</span>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Toast notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/quantum.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
